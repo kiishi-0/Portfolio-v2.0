@@ -10,10 +10,11 @@ html{
     scroll-behavior: smooth;
     scrollbar-color: #9f7bc987 #e0e0e0;
     scrollbar-width: thin;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body{
-    background: #212121;
+    /* background: #212121; */
+    background: #151515;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -65,7 +66,7 @@ header nav a.res::before{
     height: 2px;
     bottom: 0;
     right: -50%;
-    transition: left linear .25s;
+    transition: right linear .25s;
 }
 header nav a.res:hover::before{
     right: -100%;
@@ -233,9 +234,11 @@ main p.desc{
     align-items: center;
     justify-content: flex-start;
     padding: 100px 10%;
+    overflow-x: hidden;
 }
 .projects-section .projects-header{
     width: 100%;
+    
 }
 .projects-section .projects-header h3{
     text-align: right;
@@ -244,3 +247,69 @@ main p.desc{
     right: -50%;
     transition: left linear .25s;
 }
+
+.projects-section .content-div {
+    width: 100%;
+    display: flex;
+    margin: 100px 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.projects-section .content-div .proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    margin: 0 30px 50px;
+    padding: 20px 15px;
+    transition: background .25s linear;
+    background-color: none;
+}
+.projects-section .content-div .proj:hover {
+    background-color: #202022;
+}
+.projects-section .content-div .proj a.proj-title {
+    font-size: 20px;
+    color: #9f7bc987;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.projects-section .content-div .proj p {
+    font-size: 16px;
+    /* font-weight: 400; */
+    color: #fafafa;
+    margin: 20px 0;
+    height: 170px;
+}
+.projects-section .content-div .proj .image{
+    width: 100%;
+}
+.projects-section .content-div .proj .image img{
+    object-fit: contain;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter linear .25s;
+}
+.projects-section .content-div .proj:hover .image img{
+    filter: grayscale(0%);
+}
+.projects-section .content-div .proj .arrow img{
+    transform: rotate(270deg);
+    height: 20px;
+}
+.projects-section .content-div .proj .arrow{
+    width: 50px;
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    transition: background linear .25s;
+}
+.projects-section .content-div .proj .arrow:hover{
+    background-color: #9f7bc987;
+    
+}
+
