@@ -48,15 +48,15 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 56px;
 }
-header nav a{
+header nav a:not(.burger){
     color: #fafafa;
     padding: 20px;
     flex-grow: 1;
     text-align: center;
     position: relative;
     overflow-x: hidden;
-    
 }
 header nav a.res::before{
     content: '';
@@ -86,13 +86,18 @@ header nav a:hover:not(.logo, .burger)::after{
     left: 0%;
 }
 .logo{
-    flex-grow: 3;
+    flex-grow: 2;
     text-align: left;
     margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     text-transform: uppercase;
 }
 .burger{
     display: none;
+    /* padding: 20px; */
+    /* background-color: red; */
 }
 .theme{
     background: #d0afd5;
@@ -103,7 +108,7 @@ header nav a:hover:not(.logo, .burger)::after{
 .theme:hover{
     color: #fff;
 }
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width:904px){
     header nav{
         display: block;
         height: 60px;
@@ -112,7 +117,6 @@ header nav a:hover:not(.logo, .burger)::after{
         position: absolute;
         width: 100%;
         z-index: 100;
-        
     }
     header nav.response{
         background: #303030a3;
@@ -134,7 +138,9 @@ header nav a:hover:not(.logo, .burger)::after{
     .burger{
         width: 25px;
         float: right;
+        padding: 20px 0;
         cursor: pointer;
+        margin-right: 5%;
     }
     header nav a:not(.logo, .burger){
         max-width: 100%;
@@ -339,6 +345,12 @@ main p.desc{
         filter: grayscale(50%);
     }
 }
+@media only screen and (max-width: 382px){
+    .projects-section .content-div .proj {
+        width: 100%;
+        margin: 0 0 50px;
+    }
+}
 /* -------------------------- Footer Section ----------------------------------------- */
 footer{
     display: flex;
@@ -370,6 +382,7 @@ footer .links-div a{
 footer .credit{
     text-align: center;
     width: 80%;
+    margin-top: 10px;
 }
 footer .links-div a:hover{
     background-color: #9f7bc987;
