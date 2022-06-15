@@ -31,7 +31,7 @@ body{
 } 
 section h3{
     color: #fafafa;
-    font-size: clamp(20px, 8vw, 50px);
+    font-size: clamp(25px, 8vw, 50px);
     font-weight: 400;
     position: relative;
 }
@@ -169,18 +169,27 @@ main p.intro{
 main h1.name{
     color: #e4e4e4;
     font-weight: 400;
-    font-size: clamp(35px, 8vw, 55px);
+    font-size: clamp(25px, 5vw, 55px);
 }
 main h2.title{
     color: #e4e4e4;
     font-weight: 400;
-    font-size: clamp(20px, 8vw, 50px);
+    font-size: clamp(25px, 5vw, 50px);
 }
 main p.desc{
     color: #909090;
     /* font-size: 20px; */
 }
-
+@media only screen and (max-width: 906px){
+    main p{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 600px){
+    main p{
+        width: 100%;
+    }
+}
 /* -------------------------- About Section ----------------------------------------- */
 
 .about-section{
@@ -207,6 +216,7 @@ main p.desc{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .about-section .content-div .image-div img{
     filter: grayscale(100%);
@@ -223,6 +233,12 @@ main p.desc{
     align-items: flex-start;
     justify-content: flex-start;
     width: 60%;
+}
+@media only screen and (max-width: 610px){
+    .about-section .content-div .text-div{
+        width: 100%;
+        padding: 20px 0;
+    }
 }
 
 /* -------------------------- Projects Section ----------------------------------------- */
@@ -281,7 +297,7 @@ main p.desc{
     /* font-weight: 400; */
     color: #fafafa;
     margin: 20px 0;
-    height: 170px;
+    min-height: 170px;
 }
 .projects-section .content-div .proj .image{
     width: 100%;
@@ -295,21 +311,72 @@ main p.desc{
 .projects-section .content-div .proj:hover .image img{
     filter: grayscale(0%);
 }
-.projects-section .content-div .proj .arrow img{
-    transform: rotate(270deg);
+.projects-section .content-div .proj .links-div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.projects-section .content-div .proj .links-div a img{
     height: 20px;
 }
-.projects-section .content-div .proj .arrow{
+.projects-section .content-div .proj .links-div a{
     width: 50px;
     /* height: 50px; */
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
     transition: background linear .25s;
 }
-.projects-section .content-div .proj .arrow:hover{
+.projects-section .content-div .proj .links-div a:hover{
     background-color: #9f7bc987;
-    
 }
 
+@media only screen and (max-width: 900px){
+    .projects-section .content-div .proj .image img, .about-section .content-div .image-div img{
+        filter: grayscale(50%);
+    }
+}
+/* -------------------------- Footer Section ----------------------------------------- */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #9f7bc987;
+    height: 40vh;
+}
+footer .links-div{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+footer .links-div a img{
+    height: 20px;
+}
+footer .links-div a{
+    width: 50px;
+    /* height: 50px; */
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    transition: background linear .25s;
+}
+footer .credit{
+    text-align: center;
+    width: 80%;
+}
+footer .links-div a:hover{
+    background-color: #9f7bc987;
+}
+
+@media only screen and (max-width: 900px){
+    .projects-section .content-div .proj .image img, .about-section .content-div .image-div img{
+        filter: grayscale(50%);
+    }
+}
