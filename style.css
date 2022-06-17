@@ -16,6 +16,10 @@ body{
     /* background: #212121; */
     background: #151515;
 }
+header{
+    position: fixed;
+    width: 100%;
+}
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -44,11 +48,21 @@ section h3::after{
     height: 2px;
     bottom: 0;
 }
+header{
+    transition: linear .25s all;
+}
 header nav{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 56px;
+}
+header.sticky{
+    width: 100%;
+    background: #212121c5;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 200;
 }
 header nav a:not(.burger){
     color: #fafafa;
@@ -96,8 +110,6 @@ header nav a:hover:not(.logo, .burger)::after{
 }
 .burger{
     display: none;
-    /* padding: 20px; */
-    /* background-color: red; */
 }
 .theme{
     background: #d0afd5;
@@ -109,21 +121,26 @@ header nav a:hover:not(.logo, .burger)::after{
     color: #fff;
 }
 @media only screen and (max-width:904px){
+    header.sticky{
+        width: 100%;
+        background: #212121c5;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 200;
+    }
     header nav{
         display: block;
         height: 60px;
         overflow-y: hidden;
         transition: background-color .5s, height .7s linear;
-        position: absolute;
         width: 100%;
         z-index: 100;
     }
     header nav.response{
-        background: #303030a3;
+        background: #212121c5;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-        height: 100vh;    
-        /* transition: ; */
+        height: 100vh; 
     }
     .logo{
         font-size: 1.2rem;
