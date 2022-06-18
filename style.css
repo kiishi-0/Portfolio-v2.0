@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sintony&display=swap');
+
 *{
     text-decoration: None;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Roboto', sans-serif;
+    
     /* box-sizing: border-box; */
 }
 html{
@@ -15,6 +17,7 @@ html{
 body{
     /* background: #212121; */
     background: #151515;
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 header{
     position: fixed;
@@ -40,7 +43,6 @@ section h3{
     position: relative;
 }
 section h3::after{
-    background-color: #9f7bc987;
     content: '';
     position: absolute;
     background-color: #9f7bc987;
@@ -111,15 +113,6 @@ header nav a:hover:not(.logo, .burger)::after{
 .burger{
     display: none;
 }
-.theme{
-    background: #d0afd5;
-    box-shadow: inset 1px 1px 0px 5px #212121;
-    color: #212121;
-    transition: color .15s linear, background-color .2s linear; 
-}
-.theme:hover{
-    color: #fff;
-}
 @media only screen and (max-width:904px){
     header.sticky{
         width: 100%;
@@ -187,20 +180,26 @@ main p{
 }
 
 main p.intro{
-    color: #9f7bc987;
+    color: #909090;
+    font-family: 'Sintony', sans-serif;
+}
+main h1.name, main h2.title{
+    color: #e4e4e4;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: #9f7bc987;
 }
 main h1.name{
-    color: #e4e4e4;
-    font-weight: 400;
     font-size: clamp(25px, 5vw, 55px);
 }
 main h2.title{
-    color: #e4e4e4;
-    font-weight: 400;
     font-size: clamp(25px, 5vw, 50px);
 }
 main p.desc{
+    line-height: 2rem;
     color: #909090;
+    font-family: 'Sintony', sans-serif;
     /* font-size: 20px; */
 }
 @media only screen and (max-width: 906px){
@@ -211,6 +210,9 @@ main p.desc{
 @media only screen and (max-width: 600px){
     main p{
         width: 100%;
+    }
+    main h1.name, main h2.title{
+        margin-bottom: 5px;
     }
 }
 /* -------------------------- About Section ----------------------------------------- */
@@ -254,8 +256,10 @@ main p.desc{
     height: 100%;
     display: flex;
     align-items: flex-start;
+    font-family: "Sintony", "Roboto", sans-serif;
     justify-content: flex-start;
     width: 60%;
+    line-height: 2rem;
 }
 @media only screen and (max-width: 610px){
     .about-section .content-div .text-div{
@@ -318,6 +322,8 @@ main p.desc{
 .projects-section .content-div .proj p {
     font-size: 16px;
     /* font-weight: 400; */
+    font-family: "Sintony", "Roboto", sans-serif;
+    line-height: 2rem;
     color: #fafafa;
     margin: 20px 0;
     min-height: 170px;
@@ -374,7 +380,8 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #9f7bc987;
+    color: #909090;
+    font-family: 'Sintony', 'Roboto', sans-serif;
     height: 40vh;
 }
 footer .links-div{
@@ -396,10 +403,11 @@ footer .links-div a{
     padding: 20px 30px;
     transition: background linear .25s;
 }
-footer .credit{
+footer p.credit{
     text-align: center;
     width: 80%;
     margin-top: 10px;
+    color: #909090;
 }
 footer .links-div a:hover{
     background-color: #9f7bc987;
