@@ -303,21 +303,23 @@ main p.desc{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 450px;
     margin: 0 30px 50px;
     padding: 20px 15px;
     transition: background .25s linear;
     background-color: none;
+    min-height: 650px;
 }
 .projects-section .content-div .proj:hover {
     background-color: #202022;
 }
 .projects-section .content-div .proj a.proj-title {
     font-size: 20px;
-    color: #9f7bc987;
+    color: #fafafa;
     font-weight: 400;
     text-decoration: underline;
+    text-decoration-color: #9f7bc9;
 }
 .projects-section .content-div .proj p {
     font-size: 16px;
@@ -325,8 +327,8 @@ main p.desc{
     font-family: "Sintony", "Roboto", sans-serif;
     line-height: 2rem;
     color: #fafafa;
-    margin: 20px 0;
-    min-height: 170px;
+    margin: 20px 0 0;
+    min-height: 200px;
 }
 .projects-section .content-div .proj .image{
     width: 100%;
@@ -337,6 +339,21 @@ main p.desc{
     filter: grayscale(100%);
     transition: filter linear .25s;
 }
+.projects-section .content-div .proj .tools-section{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   color: #9f7bc9;
+   margin: 20px 0;
+   flex-wrap: wrap;
+}
+.projects-section .content-div .proj .tools-section div{
+   margin: 0 0 10px;
+   margin-right: 20px;
+  
+}
+
 .projects-section .content-div .proj:hover .image img{
     filter: grayscale(0%);
 }
