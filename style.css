@@ -385,10 +385,11 @@ main p.desc{
         filter: grayscale(50%);
     }
 }
-@media only screen and (max-width: 382px){
+@media only screen and (max-width: 414px){
     .projects-section .content-div .proj {
         width: 100%;
         margin: 0 0 50px;
+        padding-top: 30px;
     }
 }
 /* -------------------------- Footer Section ----------------------------------------- */
@@ -420,7 +421,7 @@ footer .links-div a{
     padding: 20px 30px;
     transition: background linear .25s;
 }
-footer p.credit{
+footer .credit{
     text-align: center;
     width: 80%;
     margin-top: 10px;
