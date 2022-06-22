@@ -425,7 +425,9 @@ footer .credit{
     text-align: center;
     width: 80%;
     margin-top: 10px;
-    color: #909090;
+}
+footer .credit a {
+    color: #9f7bc9;
 }
 footer .links-div a:hover{
     background-color: #9f7bc987;
